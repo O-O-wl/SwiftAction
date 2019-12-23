@@ -1,9 +1,6 @@
 # SwiftAction
+![build](https://img.shields.io/badge/swift-4.0-orange) ![pod](https://img.shields.io/badge/pod-v0.1.0-yellow) ![build](https://img.shields.io/badge/build-passing-dgreen) ![platform](https://img.shields.io/badge/platform-iOS-blue) ![license](https://img.shields.io/badge/license-MIT-black)
 
-[![CI Status](https://img.shields.io/travis/O-O-wl/SwiftAction.svg?style=flat)](https://travis-ci.org/O-O-wl/SwiftAction)
-[![Version](https://img.shields.io/cocoapods/v/SwiftAction.svg?style=flat)](https://cocoapods.org/pods/SwiftAction)
-[![License](https://img.shields.io/cocoapods/l/SwiftAction.svg?style=flat)](https://cocoapods.org/pods/SwiftAction)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftAction.svg?style=flat)](https://cocoapods.org/pods/SwiftAction)
 
 ## Example
 
@@ -18,6 +15,30 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftAction'
+```
+
+## Usage
+
+- **addAction**
+```swift
+       button.addAction(for: .touchDown) {
+           $0.backgroundColor = .red
+       }
+       
+       button.addAction(for: .touchUpInside) {
+           $0.backgroundColor = .blue
+       }
+       
+       button.addAction(for: .touchDragInside, action: buttonDragInside)
+   }
+```
+- **removeAction**
+```swift
+   deinit {
+       UIControl.Event.all.forEach {
+           self.button.removeAction(for: $0)
+       }
+   }
 ```
 
 ## Author
