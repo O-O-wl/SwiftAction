@@ -1,0 +1,6 @@
+framework module SwiftAction {
+  umbrella header "SwiftAction-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import SwiftAction
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        button.layer.cornerRadius = button.bounds.width/2
+        
+        button.add(for: .touchDown) {
+            $0.backgroundColor = .red
+        }
+        
+        button.add(for: .touchUpInside) {
+            $0.backgroundColor = .blue
+        }
+        
+        guard #available(iOS 10.0, *) else { return }
+        
+        button.add(for: .touchDragInside, action: buttonDragInside)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @available(iOS 10.0, *)
+    func dynamicColor() -> UIColor? {
+        let r = CGFloat.random(in: 0...1)
+        let g = CGFloat.random(in: 0...1)
+        let b = CGFloat.random(in: 0...1)
+        let a = CGFloat.random(in: 0...1)
+        return UIColor(displayP3Red: r, green: g, blue: b, alpha: a)
     }
-
+    
+    @available(iOS 10.0, *)
+    func buttonDragInside(_ sender: UIControl) -> Void {
+        sender.backgroundColor = self.dynamicColor()
+    }
 }
 

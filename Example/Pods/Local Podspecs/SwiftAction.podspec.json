@@ -1,0 +1,22 @@
+{
+  "name": "SwiftAction",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftAction.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/O-O-wl/SwiftAction",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "O-O-wl": "o.o.wl.soft@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/O-O-wl/SwiftAction.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftAction/Classes/**/*"
+}
