@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TargetAction Expressed Swift by removing @objc
+  Swifty Expression
+  TargetAction Expressed Swift by removing @objc
                        DESC
 
   s.homepage         = 'https://github.com/O-O-wl/SwiftAction'
