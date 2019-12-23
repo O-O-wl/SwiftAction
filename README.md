@@ -29,7 +29,6 @@ pod 'SwiftAction'
        }
        
        button.addAction(for: .touchDragInside, action: buttonDragInside)
-   }
 ```
 - **removeAction**
 ```swift
