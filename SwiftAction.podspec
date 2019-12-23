@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TargetAction Expressed Swift by removing @objc
                        DESC
 
   s.homepage         = 'https://github.com/O-O-wl/SwiftAction'
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwiftAction/Classes/**/*'
+  s.source_files = 'SwiftAction/**/*'
   
   # s.resource_bundles = {
   #   'SwiftAction' => ['SwiftAction/Assets/*.png']
