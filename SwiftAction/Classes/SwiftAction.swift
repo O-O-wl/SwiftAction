@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension UIControl.Event: Hashable {}
 
 typealias EventHandlers = [UIControl.Event: [(UIControl) -> Void]]
@@ -23,7 +22,7 @@ fileprivate struct TargetAction {
 
 extension UIControl {
     
-    public func add(for event: UIControl.Event, action: @escaping (UIControl) -> Void) {
+    public func addAction(for event: UIControl.Event, action: @escaping (UIControl) -> Void) {
         if TargetAction.allActions[self] == nil {
             TargetAction.allActions[self] = [:]
         }
@@ -41,7 +40,7 @@ extension UIControl {
         }
     }
     
-    public func remove(for event: UIControl.Event) {
+    public func removeAction(for event: UIControl.Event) {
         TargetAction.allActions[self]?[event] = []
     }
     
@@ -231,8 +230,9 @@ extension UIControl {
     }
 }
 
+// MARK: - UIControl.Event
 
-extension UIControl.Event {
+public extension UIControl.Event {
     
     static var all: [Self] {
         if #available(iOS 9.0, *) {
@@ -332,4 +332,3 @@ extension UIControl.Event: CustomStringConvertible {
         }
     }
 }
-

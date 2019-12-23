@@ -41,7 +41,7 @@
 		607FACE51AFB9204008FA782 /* SwiftAction_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAction_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		68574625D94CB5D4EEA49736 /* SwiftAction.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftAction.podspec; path = ../SwiftAction.podspec; sourceTree = "<group>"; };
+		68574625D94CB5D4EEA49736 /* SwiftAction.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftAction.podspec; path = ../SwiftAction.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6E5F0FA5457728E19CF369D5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7798EC9D81E2E73466B8847D /* Pods-SwiftAction_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAction_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftAction_Tests/Pods-SwiftAction_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		97843BB26478296F1AB5C5FE /* Pods_SwiftAction_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAction_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -18,18 +18,29 @@ class ViewController: UIViewController {
         
         button.layer.cornerRadius = button.bounds.width/2
         
-        button.add(for: .touchDown) {
+        button.addAction(for: .touchDown) {
             $0.backgroundColor = .red
         }
         
-        button.add(for: .touchUpInside) {
+        button.addAction(for: .touchUpInside) {
             $0.backgroundColor = .blue
         }
         
         guard #available(iOS 10.0, *) else { return }
         
-        button.add(for: .touchDragInside, action: buttonDragInside)
+        button.addAction(for: .touchDragInside, action: buttonDragInside)
     }
+    
+    deinit {
+        UIControl.Event.all.forEach {
+            self.button.removeAction(for: $0)
+        }
+    }
+}
+
+// MARK: - Action
+
+extension ViewController {
     
     @available(iOS 10.0, *)
     func dynamicColor() -> UIColor? {
@@ -45,4 +56,3 @@ class ViewController: UIViewController {
         sender.backgroundColor = self.dynamicColor()
     }
 }
-
